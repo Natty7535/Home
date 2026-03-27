@@ -1,2 +1,5 @@
 # Helping Hands
-Search 
+
+<input type="text" placeholder="Search..." id="searchBar" />
+
+Search
