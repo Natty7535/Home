@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register & Insert Screen</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        #register, #insert { display: none; padding: 20px; }
+        #register.active, #insert.active { display: block; }
+        button { margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div id="register" class="active">
+        <h2>Register</h2>
+        <form>
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <button type="button" onclick="switchToInsert()">Switch to Insert</button>
+        </form>
+    </div>
+    <div id="insert">
+        <h2>Insert</h2>
+        <p>Your content goes here.</p>
+        <button type="button" onclick="switchToRegister()">Switch to Register</button>
+    </div>
+    <script>
+        function switchToInsert() {
+            document.getElementById('register').classList.remove('active');
+            document.getElementById('insert').classList.add('active');
+        }
+        function switchToRegister() {
+            document.getElementById('insert').classList.remove('active');
+            document.getElementById('register').classList.add('active');
+        }
+    </script>
+</body>
+</html>
